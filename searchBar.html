@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+    <title>Art Case</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+
+<body style = "background-color: black;">
+
+<a href = "Home2.html">
+<div style = "background-color: lightskyblue;">
+<h1 style = "margin-top: 0; margin-left: 0px; margin-left: 0px; width:100%; opacity: 0.9; color:blue; ">ART CASE  <ion-icon style = "color: white; opacity: 0.5;" name="logo-deviantart"></ion-icon></h1> 
+</div>
+</a>
+
+<br><br><br>
+<h1 style = "font-size: 50px; margin-top:0px; color:white; "> Search.</h1>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for artists and pieces...">
+
+<ul id="myUL">
+  <li><a href="Artists.html#kellan_shanahan">Kellan Shanahan - 'Unknown Boundaries'</a></li>
+  <li><a href="Artists.html#angel_otero">Angel Otero - 'Painter's Bath'</a></li>
+
+  <li><a href="Artists.html#raymond_lau">Raymond Lau - 'Desert Mouse'</a></li>
+  <li><a href="Artists.html#sophia_kim">Sophia Kyungwon Kim - 'The Screen Age'</a></li>
+
+  <li><a href="Artists.html#tania_costa">Tania Costa - 'Untited'</a></li>
+  <li><a href="Artists.html#hana_pour">Hana Hozabr Pour - 'Untitled'</a></li>
+  <li><a href="Artists.html#jim_russel">Jim Russel - 'The Poetics of Proximity', 'I'm Just Over There'</a></li>
+
+  <li><a href="Artists.html#angel_chi">Angel Chi - 'Sudden Tranaquility, Drowning in Waves'</a></li>
+  <li><a href="Artists.html#kyle_scheurmann">Kyle Scheurmann - 'Moon Island', 'Some Trees Turned Green With Envy'</a></li>
+
+  <li><a href="Artists.html#brenda_draney">Brenda Draney - 'Admitted'</a></li>
+
+
+</ul>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
+</body>
+</body>
+
+</html>
+
+
+
+
+<style>
+
+h1{
+
+text-align:center; 
+font-family: 'Poppins', sans-serif;
+
+}
+
+
+#myInput {
+  background-image: url('https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png'); /* Add a search icon to input */
+  background-size: 1.25%;
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 95.7%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+</style>
+
+<script>
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+</script>
